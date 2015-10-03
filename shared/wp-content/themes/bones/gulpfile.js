@@ -19,6 +19,13 @@ gulp.task('default', function() {
         .pipe(gulp.dest('library/css'));
 });
 
+gulp.task('vendor-css', function() {
+    gulp.src('bower_components/bootstrap-less/less/bootstrap.less')
+        .pipe(less())
+        .pipe(rename('vendor.css'))
+        .pipe(gulp.dest('library/css'));
+});
+
 gulp.task('watch',function(){
     gulp.watch(lessGlob,['default']);
 });
@@ -27,7 +34,7 @@ gulp.task('reload', function() {
     browserSync.reload();
 });
 
-gulp.task('server',['default'],function(){
+gulp.task('server',['vendor-css','default'],function(){
     browserSync.init({
         proxy: serverUrl
     });

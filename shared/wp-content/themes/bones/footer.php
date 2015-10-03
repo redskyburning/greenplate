@@ -24,7 +24,7 @@
 
 			</footer>
 
-		</div>
+		</div> <!-- end of container -->
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>

@@ -1,0 +1,22 @@
+{
+  "name": "bones",
+  "version": "1.0.0",
+  "description": "A Lightweight Wordpress Development Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.5.3",
+    "browser-sync": "^2.9.8",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.3",
+    "gulp-postcss": "^6.0.0",
+    "gulp-rename": "^1.2.2",
+    "less": "^2.5.3",
+    "map-stream": "0.0.6"
+  }
+}

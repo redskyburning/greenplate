@@ -1,0 +1,23 @@
+{
+  "name": "bones",
+  "version": "0.0.0",
+  "homepage": "https://github.com/redskyburning/greenplate",
+  "authors": [
+    "Ben Webb <bwebb@stelladot.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-less": "~3.3.4"
+  },
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

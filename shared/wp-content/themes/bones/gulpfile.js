@@ -4,37 +4,16 @@ var map         = require('map-stream');
 var rename      = require('gulp-rename');
 var concat      = require('gulp-concat');
 var browserSync = require('browser-sync').create();
+var postcss     = require('gulp-postcss');
 
-var sourceGlob  = 'source/**/*.+(md|apib|json)';
-var rootGlob    = 'root.apib';
-var outputName  = 'apiary.apib';
-var outputDir   = ''; // Empty string means gulp root dir
-var serverUrl   = 'localhost:8080';
+var serverUrl   = 'greenplatespecial.dev';
 var lessGlob    = 'library/less/**/*.less';
-
-function compile(reload)
-{
-    reload = typeof reload == 'undefined' ? false : reload;
-
-    return gulp.src(rootGlob)
-        .pipe(map(function (file, cb) {
-            console.log('transcluding');
-            var contents    = file.contents.toString();
-            hercule.transcludeString(contents,function(output){
-                //console.log(output);
-                file.contents = new Buffer(output);
-                cb(null, file);
-            });
-        }))
-        .pipe(rename(outputName))
-        .pipe(gulp.dest(outputDir));
-}
-
 
 
 gulp.task('default', function() {
     gulp.src('library/less/root.less')
         .pipe(less())
+        .pipe( postcss([ require('autoprefixer')]) )
         .pipe(rename('root.css'))
         .pipe(gulp.dest('library/css'));
 });
@@ -51,5 +30,5 @@ gulp.task('server',['default'],function(){
     browserSync.init({
         proxy: serverUrl
     });
-    gulp.watch(lessGlob,['default']);
+    gulp.watch(lessGlob,['default','reload']);
 });

@@ -1,3 +1,7 @@
 html {
-  background: red;
+  background: green;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }

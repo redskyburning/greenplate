@@ -8,6 +8,7 @@ var postcss     = require('gulp-postcss');
 
 var serverUrl   = 'greenplatespecial.dev';
 var lessGlob    = 'library/less/**/*.less';
+var templGlob   = '**/*.php';
 
 
 gulp.task('default', function() {
@@ -31,4 +32,5 @@ gulp.task('server',['default'],function(){
         proxy: serverUrl
     });
     gulp.watch(lessGlob,['default','reload']);
+    gulp.watch(templGlob,['reload']);
 });

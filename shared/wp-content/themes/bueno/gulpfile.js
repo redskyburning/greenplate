@@ -10,6 +10,18 @@ var serverUrl   = 'greenplatespecial.dev';
 var lessGlob    = 'less/**/*.less';
 var templGlob   = '**/*.php';
 
+gulp.task('vendor-css', function() {
+    gulp.src('bower_components/bootstrap-less/less/bootstrap.less')
+        .pipe(less())
+        .pipe(rename('vendor.css'))
+        .pipe(gulp.dest('css'));
+});
+
+gulp.task('vendor-js', function() {
+    gulp.src('bower_components/bootstrap-less/js/*.js')
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('js'));
+});
 
 gulp.task('default', function() {
     gulp.src('less/root.less')

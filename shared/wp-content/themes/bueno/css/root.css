@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  background: #72b464;
 }
 h1,
 h2,
@@ -14,7 +15,7 @@ h6 {
   width: 100%;
   max-width: 1000px;
   margin: 20px auto;
-  padding: 0 10px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 #header {
@@ -56,6 +57,7 @@ h6 {
 }
 #header #pagenav {
   margin-top: 0;
+  margin-bottom: 20px;
 }
 #header #pagenav .menu {
   display: -webkit-box;
@@ -108,31 +110,44 @@ h6 {
 #content > * + * {
   margin-left: 20px;
 }
-.post {
+.post,
+.page-section {
   margin: 0;
-  margin-left: 30px;
   margin-bottom: 20px;
   padding: 40px;
-  border: 5px solid #efefef;
+  border: 5px solid #708e48;
+  background: #fff;
 }
-.post .title {
+.post .title,
+.page-section .title {
   font-family: 'Oswald', sans-serif;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
-.post .date {
+.post .date,
+.page-section .date {
   font-family: 'Oswald', sans-serif;
+  height: 75px;
+  top: 15px;
 }
-.post .learn-more {
+.post .learn-more,
+.page-section .learn-more {
   font-size: 1.1em;
   font-weight: bold;
   text-decoration: none;
 }
+.post {
+  margin-left: 30px;
+}
 .more_entries {
   margin: 0;
   margin-left: 30px;
+  border: 5px solid #708e48;
 }
-#sidebar > * {
+#sidebar .widget {
   padding: 40px;
-  border: 5px solid #efefef;
+  border: 5px solid #708e48;
   background: #fff;
 }
 #sidebar > * + * {
@@ -157,4 +172,24 @@ h6 {
 .widget ul li a:hover {
   font-weight: normal;
   border-bottom: none;
+}
+#knockout-logo {
+  margin: -30px auto 10px;
+  width: 90%;
+}
+.homepage-content {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 40px;
+  border: 5px solid #708e48;
+  background: #fff;
+}
+#knockout-slogan {
+  width: 50%;
+  margin: 20px auto;
+}
+.sidebar-logo img {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
 }

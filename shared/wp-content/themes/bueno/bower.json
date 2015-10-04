@@ -1,5 +1,5 @@
 {
-  "name": "bones",
+  "name": "gps",
   "version": "0.0.0",
   "homepage": "https://github.com/redskyburning/greenplate",
   "authors": [
@@ -18,6 +18,7 @@
     "bootstrap-less": "~3.3.4"
   },
   "dependencies": {
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
   }
 }

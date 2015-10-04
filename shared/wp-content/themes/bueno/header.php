@@ -3,6 +3,7 @@
 <head profile="http://gmpg.org/xfn/11">
 
 <title><?php woo_title(); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <?php woo_meta(); ?>
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
@@ -21,9 +22,12 @@
    
 <?php if ( is_single() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css" />
 	<link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/bower_components/bootstrap/dist/css/bootstrap.min.css" />
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/css/root.css" />
 

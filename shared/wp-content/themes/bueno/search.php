@@ -4,8 +4,11 @@
 		<div id="main" class="col-left">
             
             <?php if (have_posts()) : $count = 0; ?>
-            
+
+
+			<div class="search-query post">
                 <span class="archive_header"><?php _e('Search results', 'woothemes') ?>: <?php printf(the_search_query()); ?></span>
+			</div>
                 
             <?php while (have_posts()) : the_post(); $count++; ?>
                                                                         

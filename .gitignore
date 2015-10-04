@@ -1,3 +1,7 @@
 .idea
 .DS_Store
 .vagrant
+shared/wp-content/gallery
+shared/wp-content/uploads
+shared/wp-content/plugins
+shared/wp-content/ngg

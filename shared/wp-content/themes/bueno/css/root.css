@@ -15,6 +15,9 @@ a:link,
 a:visited {
   color: #4c721d;
 }
+.nav li {
+  float: none;
+}
 #container {
   width: 100%;
   max-width: 1000px;
@@ -49,70 +52,168 @@ a:visited {
   margin-left: 20px;
 }
 #header #site-logo {
-  width: 100px;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  width: 100px;
+}
+#header #site-logo .logo-link {
+  display: block;
 }
 #header #site-logo img {
   width: 100%;
   height: auto;
 }
-#header #pagenav {
-  margin-top: 0;
-  margin-bottom: 20px;
+@media screen and (min-width: 701px) {
+  #header #nav-toggle {
+    display: none;
+  }
+  #header #pagenav {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  #header #pagenav .menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  #header #pagenav .menu > * {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+  #header #pagenav a {
+    padding: 10px 15px;
+    color: #eee;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif !important;
+    text-transform: lowercase;
+    font-size: 22px;
+  }
+  #header #pagenav > li > a {
+    border-bottom: 4px solid #eee;
+  }
+  #header #pagenav li:hover > a {
+    border-color: #4c721d;
+    color: #fff;
+  }
+  #header #pagenav li:hover ul {
+    border-top: 4px solid #4c721d;
+    margin-top: -4px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  #header #pagenav li:hover ul li {
+    border: none;
+  }
+  #header #pagenav li:hover ul a {
+    font-size: 16px;
+    padding: 5px 10px;
+    background: #eee;
+    width: 100%;
+  }
+  #header #pagenav li:hover ul a:hover {
+    background: #fff;
+    color: inherit !important;
+  }
 }
-#header #pagenav .menu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-}
-#header #pagenav .menu > * {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-}
-#header #pagenav a {
-  padding: 10px 15px;
-  color: #eee;
-  letter-spacing: 1px;
-  font-family: 'Oswald', sans-serif !important;
-  border-bottom: 4px solid #eee;
-  text-transform: lowercase;
-  font-size: 22px;
-}
-#header #pagenav li:hover > a {
-  border-color: #4c721d;
-  color: #fff;
-}
-#header #pagenav li:hover ul {
-  border-top: 4px solid #4c721d;
-  margin-top: -4px;
-}
-#header #pagenav li ul {
-  border-top: none;
-}
-#header #pagenav li ul li {
-  border: none;
-}
-#header #pagenav li ul a {
-  font-size: 16px;
-  padding: 5px 10px;
-  background: #eee;
-}
-#header #pagenav li ul a:hover {
-  background: #fff;
-  color: inherit !important;
+@media screen and (max-width: 700px) {
+  #header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #header #site-logo {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #header #site-logo .logo-link {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 70px;
+  }
+  #header #site-logo #nav-toggle {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+  }
+  #header #pagenav {
+    display: none;
+    background: #fff;
+    margin: 0;
+    padding: 40px;
+    border: 5px solid #708e48;
+    width: 100%;
+    margin-top: 20px;
+  }
+  #header #pagenav li a {
+    border: none;
+    text-transform: lowercase;
+    padding: 0;
+  }
+  #header #pagenav li a:hover {
+    background: #fff;
+  }
+  #header #pagenav li + li {
+    margin-top: 10px;
+  }
+  #header #pagenav li ul {
+    position: static;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    padding-left: 10px;
+    list-style: disc;
+  }
+  #header #pagenav li ul li {
+    display: block;
+    border: none;
+    list-style: disc !important;
+  }
+  #header #pagenav li ul li a {
+    font-family: 'Oswald', sans-serif !important;
+    font-size: inherit;
+    font-size: 20px;
+    color: #333 !important;
+  }
+  #header #pagenav li ul ul {
+    margin: 0 !important;
+  }
+  #header #pagenav.active {
+    display: block;
+  }
 }
 #content {
   width: 100%;

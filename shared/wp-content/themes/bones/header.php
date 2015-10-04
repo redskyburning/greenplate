@@ -45,9 +45,10 @@
 			<header id="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div class="header-logo">
-					<a href="<?php echo home_url(); ?>" rel="nofollow">
+					<a class="logo-link" href="<?php echo home_url(); ?>" rel="nofollow">
 						<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-with-text.svg" />
 					</a>
+
 					<div class="site-name">
 						<?php bloginfo('name'); ?>
 					</div>

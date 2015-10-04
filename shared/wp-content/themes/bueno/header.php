@@ -23,6 +23,8 @@
 <?php if ( is_single() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/site.js"></script>
 
 <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css" />
 	<link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -41,7 +43,11 @@
 	<div id="header" class="col-full">
 
 		<div id="site-logo">
-			<a href="/"><img src="<?php bloginfo('template_directory'); ?>/images/logo-only-white.svg" /></a>
+			<a class="logo-link logo-only" href="/"><img src="<?php bloginfo('template_directory'); ?>/images/logo-only-white.svg" /></a>
+
+			<div id="nav-toggle">
+				<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+			</div>
 		</div>
 
 		<!--<div id="logo" class="fl">

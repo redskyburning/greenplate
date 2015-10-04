@@ -174,12 +174,12 @@ a:visited {
 }
 #sidebar {
   width: auto;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   overflow: auto;
-  min-width: 200px;
+  width: 250px;
 }
 #sidebar > .widget {
   padding: 20px;
@@ -316,4 +316,7 @@ a:visited {
   margin: 0;
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
+}
+.apss-theme-6 .apss-single-icon .apss-icon-block {
+  margin-top: 7px;
 }

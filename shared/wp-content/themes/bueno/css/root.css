@@ -179,7 +179,6 @@ a:visited {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   overflow: auto;
-  width: 250px;
 }
 #sidebar > .widget {
   padding: 20px;
@@ -208,6 +207,11 @@ a:visited {
   #sidebar > .widget,
   #sidebar > .sidebar-logo {
     display: none;
+  }
+}
+@media screen and (min-width: 701px) {
+  #sidebar {
+    width: 250px;
   }
 }
 #knockout-logo {

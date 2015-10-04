@@ -164,7 +164,6 @@ a:link, a:visited  {
     width:auto;
     flex:0 0 auto;
     overflow:auto;
-    width:250px;
 
     > .widget {
         padding:@site-gutter;
@@ -199,6 +198,10 @@ a:link, a:visited  {
         > .widget, > .sidebar-logo {
             display:none;
         }
+    }
+
+    @media screen and (min-width:@tablet-min) {
+        width:250px;
     }
 }
 

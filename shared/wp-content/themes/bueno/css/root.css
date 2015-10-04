@@ -360,3 +360,6 @@ a:visited {
 #footer-contact a {
   color: inherit;
 }
+#aec-modal-container {
+  max-width: 100%;
+}

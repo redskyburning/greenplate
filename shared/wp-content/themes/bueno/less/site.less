@@ -68,20 +68,47 @@ a:link, a:visited  {
             padding:10px 15px;
             color:@almost-white;
             letter-spacing:1px;
-            font-family:@headline-font;
-            border-color:@almost-white;
+            font-family:@headline-font !important;
+            border-bottom: @nav-border-width solid @almost-white;
             text-transform:lowercase;
             font-size:22px;
+        }
 
+        li {
             &:hover {
-                border-color:@dark-green;
-                color:@white;
+                > a {
+                    border-color:@dark-green;
+                    color:@white;
+                }
+
+                ul {
+                    border-top:@nav-border-width solid @dark-green;
+                    margin-top:-1 * @nav-border-width;
+
+                }
             }
         }
 
-        li ul a {
-            &:hover {
+        li ul {
+            border-top:none;
 
+            li {
+                border:none;
+
+                &:hover {
+                }
+            }
+
+            a {
+                font-size: 16px;
+                padding:5px 10px;
+                background: @almost-white;
+                //border-left:3px solid @light-green;
+
+                &:hover {
+                    background:@white;
+                    color:inherit !important;
+                }
             }
         }
     }

@@ -23,6 +23,7 @@
 <?php wp_head(); ?>
 
 <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/css/root.css" />
 
@@ -34,22 +35,26 @@
 
         
 	<div id="header" class="col-full">
-   
-		<div id="logo" class="fl">
+
+		<div id="site-logo">
+			<a href="/"><img src="<?php bloginfo('template_directory'); ?>/images/logo-only-white.svg" /></a>
+		</div>
+
+		<!--<div id="logo" class="fl">
 	       
-	       	<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('description'); ?>"><img class="title" src="<?php if ( get_option('woo_logo') <> "" ) { echo get_option('woo_logo'); } else { bloginfo('template_directory'); ?>/images/logo.png<?php } ?>" alt="<?php bloginfo('name'); ?>" /></a>
+	       	<a href="<?php /*bloginfo('url'); */?>" title="<?php /*bloginfo('description'); */?>"><img class="title" src="<?php /*if ( get_option('woo_logo') <> "" ) { echo get_option('woo_logo'); } else { bloginfo('template_directory'); */?>/images/logo.png<?php /*} */?>" alt="<?php /*bloginfo('name'); */?>" /></a>
 	      	
-	      	<?php if(is_single() || is_page()) : ?>
-	      		<span class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></span>
-	      	<?php else: ?>
-	      		<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-	      	<?php endif; ?>
+	      	<?php /*if(is_single() || is_page()) : */?>
+	      		<span class="site-title"><a href="<?php /*bloginfo('url'); */?>"><?php /*bloginfo('name'); */?></a></span>
+	      	<?php /*else: */?>
+	      		<h1 class="site-title"><a href="<?php /*bloginfo('url'); */?>"><?php /*bloginfo('name'); */?></a></h1>
+	      	<?php /*endif; */?>
 	      	
-	      		<span class="site-description"><?php bloginfo('description'); ?></span>
+	      		<span class="site-description"><?php /*bloginfo('description'); */?></span>
 	      	
-		</div><!-- /#logo -->
+		</div>--><!-- /#logo -->
 	       
-	   	<div id="pagenav" class="nav fr">
+	   	<div id="pagenav" class="nav">
 			<?php
 			if ( function_exists('has_nav_menu') && has_nav_menu('primary-menu') ) {
 				wp_nav_menu( array( 'sort_column' => 'menu_order', 'container' => 'ul', 'theme_location' => 'primary-menu' ) );

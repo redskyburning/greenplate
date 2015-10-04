@@ -27,7 +27,7 @@ gulp.task('reload', function() {
     browserSync.reload();
 });
 
-gulp.task('server',['vendor-css','default'],function(){
+gulp.task('server',['default'],function(){
     browserSync.init({
         proxy: serverUrl
     });

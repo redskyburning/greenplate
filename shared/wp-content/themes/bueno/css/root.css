@@ -215,6 +215,11 @@ a:visited {
     display: block;
   }
 }
+@media screen and (max-width: 700px) {
+  .page-template-template-homepage #header #pagenav {
+    margin-bottom: 20px;
+  }
+}
 #content {
   width: 100%;
   display: -webkit-box;
